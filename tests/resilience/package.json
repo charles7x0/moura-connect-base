@@ -1,0 +1,22 @@
+{
+  "name": "resilience-tests",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "tsx run-all.ts",
+    "test:kafka": "tsx tests/kafka-down.ts",
+    "test:mqtt": "tsx tests/mqtt-down.ts",
+    "test:malformed": "tsx tests/malformed-payload.ts",
+    "test:unknown-version": "tsx tests/unknown-version.ts",
+    "test:stress": "tsx tests/stress.ts",
+    "test:restart": "tsx tests/container-restart.ts"
+  },
+  "dependencies": {
+    "mqtt": "^5.10.4"
+  },
+  "devDependencies": {
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.4",
+    "@types/node": "^20.14.0"
+  }
+}
